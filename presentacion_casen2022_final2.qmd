@@ -1,0 +1,237 @@
+---
+title: Diseño Muestral Casen 2022
+subtitle: Curso de Muestreo
+format: 
+  clean-revealjs:
+    incremental: true
+    logo: LogoUsach.png
+html-math-method:
+  method: mathjax
+  url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+author:
+  - name: Richard
+  - name: [Tamar]
+    affiliations: Universidad de Santiago de Chile
+date: 12-19-2024
+
+
+output-file: index.html
+---
+
+## Introducción {.smaller}
+
+### Índice
+
+**Introducción**
+
+**Objetivos y Contexto del Problema**
+
+**Diseño Muestral y Unidades de Muestreo**
+
+**Tamaño Muestral**
+
+**Error Muestral**
+
+**Uso Efectivo de Resultados**
+
+**Conclusión**
+
+------------------------------------------------------------------------
+
+### Preliminares {.scrollable}
+
+¿Que es **Casen**?
+
+-   Encuesta de Caracterización Socioeconómica Nacional
+
+¿Quien o quienes la elaboran?
+
+-   Fue elaborada por el **Ministerio de Desarrollo Social y Familia** (en adelante, el Ministerio)
+
+-   Mediante un convenio de transferencia, se encarga la elaboración del diseño muestral al **Instituto Nacional de Estadísticas** (en adelante, INE).
+
+    |  |  |
+    |------------------------------------|------------------------------------|
+    | ![](Logo_Ministerio_de_Desarrollo_Social_de_Chile.jpg){width="142"} | ![](Logo_INE.png){width="175"} |
+
+------------------------------------------------------------------------
+
+## Introducción
+
+### Innovaciones
+
+-   En la elaboración de la muestra se utilizó el nuevo marco muestral de viviendas (MMV 2020).
+
+-   Tras la versión 2020 en pandemia, Casen se volvió a realizar en modalidad presencial en hogares y, por primera vez, se aplicó mediante dispositivos móviles[^1].
+
+-   Se actualizó el módulo de identidad de género y orientación sexual.
+
+[^1]: se utilizó el software Survey Solutions, desarrollado por el Banco Mundial para la recolección de información.
+
+------------------------------------------------------------------------
+
+## Introducción {.smaller}
+
+### ¿Para que sirve y de que manera?
+
+-   Cumplir un rol fundamental en la toma de decisiones para la formulación de políticas sociales.
+
+-   Obteniendo estimaciones Precisas y confiables que puedan representar la realidad de la población de interes.
+
+-   Medida poblacional o parámetro a estimar: **Tasa de pobreza** (porcentaje de personas en situación de pobreza por ingresos).
+
+-   Para lograr esta propiedad deseable en las estimaciones, es necesario tener una muestra que responda a ciertos objetivos.
+
+    ![](Estimador%20de%20razon.png){width="814"}
+
+------------------------------------------------------------------------
+
+## Introducción
+
+### Objetivos y Contexto del Problema
+
+-   Propiedad deseable en las estimaciones:
+
+    -   **Muestra que responda a las exigencias de los errores muestrales propuestos**
+    -   **La muestra debe ser construida para los objetivos propios de la encuesta**
+    -   **Balancear en su diseño el presupuesto**[^2] **disponible**
+
+-   *"Perfectamente equilibrado, como todo debe estar" - Thanos*
+
+[^2]:  El ministerio informa que el Centro de Microdatos de la Universidad de Chile se ha adjudicado la licitarcion para el levantamiento de casen. El presupuesto total de la propuesta que se adjudicó el contrato es de **\$3.269.121.000**.
+
+------------------------------------------------------------------------
+
+## Diseño Muestral y Unidades de Muestreo
+
+### Tipo de Diseño
+
+-   **Probabilístico, estratificado y bietápico**.
+-   Estratos definidos por:
+    -   **Comuna**
+    -   **Área (Urbana/Rural)**
+    -   **Nivel Socioeconómico (NSE)**
+
+### Etapas de Selección
+
+1.  **Primera Etapa**: Selección de **UPM** (Unidades Primarias de Muestreo).
+2.  **Segunda Etapa**: Selección de **viviendas** (USM) dentro de cada UPM.
+
+------------------------------------------------------------------------
+
+## Diseño Muestral: Estratificación
+
+![](Nacional.png)
+
+------------------------------------------------------------------------
+
+## Diseño Muestral: Explicación {.smaller}
+
+| Concepto | Descripción | Dónde Ocurre |
+|--------------------------------------|-----------------|-----------------|
+| Estratificación | División de la población en grupos homogéneos (comuna, área, NSE). | Antes del muestreo |
+| Conglomerado | Grupo de viviendas (UPM) seleccionado como una unidad en la primera etapa del muestreo. | Primera etapa del muestreo |
+| Muestreo Bietápico | Proceso de selección en dos etapas: 1) Selección de UPM (conglomerado), 2) Selección de viviendas dentro de la UPM. | Después de la estratificación |
+
+-   Vivienda $\neq$ Hogar
+
+-   Unidad final informacion: Todos los hogares y todas las personas que se declaran residentes habituales (Idoneamente mayores 18)
+
+------------------------------------------------------------------------
+
+## Diseño Muestral: Estimacion del Tamaño Muestral
+
+Se compone de 9 pasos:
+
+Paso 1: error estandar y efecto diseño
+
+Paso 2: Se obtienen los tamaños muestrales (se consideran SE, $e$ relativo, IC)
+
+Paso 3: Correlación Intraclasica
+
+Paso 5: Factor de correción
+
+Paso 7: Sobremuestreo (tasa de no logro)
+
+------------------------------------------------------------------------
+
+## Diseño Muestral: Tamaño Muestral
+
+### Tamaño Muestral
+
+### Objetivo del Tamaño Muestral
+
+-   Número de viviendas MMV 2020 - **6.206.626**
+-   **71.028 viviendas** a nivel nacional. (Proviene de una simulación[^3])
+-   Garantizar representatividad y precisión.
+
+[^3]: Se seleccionó la simulación número 5
+
+### Errores Esperados
+
+-   **Error absoluto nacional**: 0,4%.
+-   **Error relativo nacional**: 3,3%.
+
+------------------------------------------------------------------------
+
+## Diseño Muestral: Tabla del Tamaño Muestral
+
+![](Diseños.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+## Error Muestral {.smaller}
+
+### Factores que Afectan el Error
+
+Tamaño de la Muestra
+
+Dispersion de los datos
+
+Nivel de Confianza
+
+Diseño Muestral (Estratificado y Bietapico)
+
+Efecto del Diseño (Deff)
+
+Varía según región y escenario.
+
+Tasa de no logro
+
+------------------------------------------------------------------------
+
+## Error Muestral: Tabla {.smaller}
+
+![](images/clipboard-1801328720.png)
+
+------------------------------------------------------------------------
+
+## Uso Efectivo de Resultados
+
+![](Incidencia%20de%20la%20pobreza.png)
+
+------------------------------------------------------------------------
+
+## Uso Efectivo de Resultados
+
+![](Distribucion.png)
+
+------------------------------------------------------------------------
+
+## Conclusión y Discusión
+
+### Reflexión del Muestreo
+
+-   Diseño robusto para garantizar representatividad, y precisión.
+
+### Propuestas de Mejora
+
+1.  **General**: Actualización continua del marco muestral y el uso de nuevas tecnologias
+2.  **Específica**: Más simulaciones adaptadas a condiciones actuales y diseñar estrategias para reducir la no respuesta en las regiones menos accesibles.
+
+------------------------------------------------------------------------
+
+## Referencias
+
+1.  **Informe Diseño Muestral Casen 2022**.
+2.  Resultados de pobreza por ingresos - Observatorio social 2022
